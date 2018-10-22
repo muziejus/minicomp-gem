@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.homepage      = "https://github.com/muziejus/minicomp-gem"
 
   all_files       = `git ls-files -z`.split("\x0")
-  puts all_files
   s.files         = all_files.grep(%r!^(bin|lib|rubocop)/|^.rubocop.yml$!)
   s.executables   = all_files.grep(%r!^bin/!) { |f| File.basename(f) }
   s.bindir        = "bin"

@@ -25,19 +25,3 @@ Mercenary.program(:minicomp) do |p|
     end
   end
 end
-
-# opts = Slop.parse do |o|
-  # o.banner = "Boom boomblahblah"   
-  # o.string '-v', '--version', "print version"
-  # o.on "" do
-  #   puts o
-  #   exit
-  # end
-  # o.on '-h', '--help', "print this message" do
-  #   puts o
-  #   exit
-  # end
-# end
-
-
-

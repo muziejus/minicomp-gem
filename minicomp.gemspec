@@ -30,5 +30,6 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.extra_rdoc_files = %w(README.md LICENSE)
 
+  s.add_runtime_dependency("mercenary", "~> 0.3.3")
   #s.add_runtime_dependency("safe_yaml",             "~> 1.0")
 end

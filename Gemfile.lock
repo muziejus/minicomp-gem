@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     minicomp (0.0.0)
+      slop (~> 3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -20,6 +21,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    slop (3.6.0)
 
 PLATFORMS
   ruby
@@ -27,6 +29,7 @@ PLATFORMS
 DEPENDENCIES
   minicomp!
   rspec
+  slop
 
 BUNDLED WITH
    1.16.6

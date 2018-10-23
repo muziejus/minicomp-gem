@@ -1,5 +1,43 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'mercenary'
 require 'minicomp'
-puts Minicomp::VERSION
+
+Mercenary.program(:minicomp) do |p|
+  p.version Minicomp::VERSION
+  p.syntax "minicomp <subcommand> [options]"
+
+  Minicomp::Command.subclasses.each do |c|
+    c.init_with_program(p)
+  end
+
+  p.action do |args, _|
+    if args.empty?
+      puts p
+      puts "A subcommand friend"
+      abort
+    else
+      subcommand = args.first
+      unless p.has_command? subcommand
+        puts "Couldn't find your subcommand"
+      end
+    end
+  end
+end
+
+# opts = Slop.parse do |o|
+  # o.banner = "Boom boomblahblah"   
+  # o.string '-v', '--version', "print version"
+  # o.on "" do
+  #   puts o
+  #   exit
+  # end
+  # o.on '-h', '--help', "print this message" do
+  #   puts o
+  #   exit
+  # end
+# end
+
+
+

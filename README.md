@@ -11,3 +11,12 @@ First goal:
 
 The resulting `.html` has an `<ol>` describing all the columns. This can be
 pushed and shared on gh-pages or deposited in a repository.
+
+## What to do:
+
+1. clone the repo
+2. cd into the minicomp-gem dir
+3. `gem build minicomp.gemspec`
+4. `gem install ./minicomp-0.0.0.gem`
+5. `minicomp`
+5. see what happens.

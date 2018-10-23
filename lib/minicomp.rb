@@ -24,4 +24,7 @@ end
 
 module Minicomp
   autoload :VERSION, "minicomp/version"
+  autoload :Command, "minicomp/command"
+
+  require_all "minicomp/commands"
 end

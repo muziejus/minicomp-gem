@@ -6,6 +6,7 @@ require 'minicomp'
 
 Mercenary.program(:minicomp) do |p|
   p.version Minicomp::VERSION
+  p.description "This is the description field"
   p.syntax "minicomp <subcommand> [options]"
 
   Minicomp::Command.subclasses.each do |c|
@@ -14,13 +15,12 @@ Mercenary.program(:minicomp) do |p|
 
   p.action do |args, _|
     if args.empty?
-      puts p
-      puts "A subcommand friend"
+      puts "Please include a <subcommand> or run `minicomp -h` for help"
       abort
     else
       subcommand = args.first
       unless p.has_command? subcommand
-        puts "Couldn't find your subcommand"
+        puts "Couldn’t find your subcommand"
       end
     end
   end
